@@ -5,14 +5,8 @@ namespace Mattiasgeniar\Percentage\Tests;
 use Mattiasgeniar\Percentage\Percentage;
 use PHPUnit\Framework\TestCase;
 
-class ExampleTest extends TestCase
+class PercentageTest extends TestCase
 {
-    /** @test */
-    public function true_is_true()
-    {
-        $this->assertTrue(true);
-    }
-
     /** @test */
     public function it_can_calculate_simple_percentage_differences()
     {
