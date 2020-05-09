@@ -23,10 +23,10 @@ Percentage::changeBetween(100, 120);            // 20%
 // What's the absolute change from 100 to 80?
 Percentage::absoluteChangeBetween(100, 80);     // 20%, not -20%
 
-// How much is 120 to 100?
+// How much is 120 compared to 100?
 Percentage::percentageOf(120, 100);             // 120%
 
-// How much is 50 to 100?
+// How much is 50 compared to 100?
 Percentage::percentageOf(50, 100);              // 50%
 
 // What is 20% of 200?
