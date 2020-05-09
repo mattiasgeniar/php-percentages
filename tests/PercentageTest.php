@@ -2,8 +2,8 @@
 
 namespace Mattiasgeniar\Percentage\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Mattiasgeniar\Percentage\Percentage;
+use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase
 {
