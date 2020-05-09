@@ -17,20 +17,20 @@ composer require mattiasgeniar/php-percentages
 ```php
 use Mattiasgeniar\Percentage\Percentage;
 
-// Percentage increase 100 to 120?
-Percentage::changeBetween(100, 120);            // 20%
+// What's the percentage increase from 100 to 120?
+Percentage::differenceBetween(100, 120);            // 20%
 
-// What's the absolute change from 100 to 80?
-Percentage::absoluteChangeBetween(100, 80);     // 20%, not -20%
+// What's the absolute percentage change from 100 to 80?
+Percentage::absoluteDifferenceBetween(100, 80);     // 20%, not -20%
 
 // How much is 120 compared to 100?
-Percentage::percentageOf(120, 100);             // 120%
+Percentage::calculate(120, 100);             // 120%
 
 // How much is 50 compared to 100?
-Percentage::percentageOf(50, 100);              // 50%
+Percentage::calculate(50, 100);              // 50%
 
 // What is 20% of 200?
-Percentage::fromNumber(20, 200);                // 40
+Percentage::of(20, 200);                // 40
 
 // What is the 140% extension from 3 to 2?
 Percentage::extension(140, 3, 2);               // 1.6

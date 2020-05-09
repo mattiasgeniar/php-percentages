@@ -8,7 +8,7 @@ class Percentage
         What is the percentage increase or decrease
         from $a to $b ?
     */
-    public static function changeBetween($a, $b)
+    public static function differenceBetween($a, $b)
     {
         return floatval(($b - $a) / $a * 100);
     }
@@ -17,15 +17,15 @@ class Percentage
         What is the absolute percentage increase or decrease
         from $a to $b ?
     */
-    public static function absoluteChangeBetween($a, $b)
+    public static function absoluteDifferenceBetween($a, $b)
     {
-        return floatval(abs(static::changeBetween($a, $b)));
+        return floatval(abs(static::differenceBetween($a, $b)));
     }
 
     /*
         How much is $a of $b in percentages?
     */
-    public static function percentageOf($a, $b)
+    public static function calculate($a, $b)
     {
         return floatval($a * 100 / $b);
     }
@@ -33,7 +33,7 @@ class Percentage
     /*
         Get a percentage return from a number.
     */
-    public static function fromNumber($percentage, $number)
+    public static function of($percentage, $number)
     {
         return floatval($number * ($percentage / 100));
     }
