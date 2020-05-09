@@ -1,8 +1,8 @@
-# A php-percentages package
+# A PHP package to work with percentages
 
-A clean interface to calculate percentages in PHP: changes between values, percentage increases, partial values, ...
+A clean interface to calculate percentages in PHP: changes between values, percentage increases, partial values, extensions, ...
 
-Think of it as a very lightweight math library for the basic stuff.
+Think of it as a _very_ lightweight math library for the basic stuff. Aimed to make your code more readable and easier to understand.
 
 ## Installation
 
