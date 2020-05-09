@@ -15,8 +15,16 @@ composer require mattiasgeniar/php-percentages
 ## Usage
 
 ```php
+use Mattiasgeniar\Percentage\Percentage;
 
+// Percentage increase/decrease from $a to $b
+Percentage::changeBetween(100, 120);    // 20%
 
+// How much is $a in relation to $b?
+Percentage::percentageOf(120, 100);     // 120%
+
+// What is $b percentage of $a?
+Percentage::fromNumber(200, 20);        // 40%
 ```
 
 ## Testing
