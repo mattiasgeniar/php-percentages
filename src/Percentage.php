@@ -29,8 +29,8 @@ class Percentage
     /*
         Get a percentage return from a number.
     */
-    public static function fromNumber($a, $percentage)
+    public static function fromNumber($percentage, $number)
     {
-        return $a * ($percentage / 100);
+        return $number * ($percentage / 100);
     }
 }
