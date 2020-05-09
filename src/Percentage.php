@@ -4,17 +4,17 @@ namespace Mattiasgeniar\Percentage;
 
 class Percentage
 {
-   /**
-    * What is the percentage increase or decrease from $a to $b ?
-    */
+    /**
+     * What is the percentage increase or decrease from $a to $b ?
+     */
     public static function differenceBetween($a, $b)
     {
         return floatval(($b - $a) / $a * 100);
     }
 
-   /**
-    * What is the absolute percentage increase or decrease from $a to $b ?
-    */
+    /**
+     * What is the absolute percentage increase or decrease from $a to $b ?
+     */
     public static function absoluteDifferenceBetween($a, $b)
     {
         return floatval(abs(static::differenceBetween($a, $b)));
