@@ -34,6 +34,8 @@ class ExampleTest extends TestCase
     {
         $this->assertEquals(40, Percentage::fromNumber(200, 20));
 
+        $this->assertEquals(100, Percentage::fromNumber(200, 50));
+
         $this->assertEquals(-40, Percentage::fromNumber(200, -20));
     }
 }

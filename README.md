@@ -22,9 +22,11 @@ Percentage::changeBetween(100, 120);    // 20%
 
 // How much is $a in relation to $b?
 Percentage::percentageOf(120, 100);     // 120%
+Percentage::percentageOf(50, 100);      // 50%
 
 // What is $b percentage of $a?
-Percentage::fromNumber(200, 20);        // 40%
+Percentage::fromNumber(200, 20);        // 40
+Percentage::fromNumber(200, 50);        // 100
 ```
 
 ## Testing
