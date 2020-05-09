@@ -4,18 +4,22 @@ namespace Mattiasgeniar\Percentage;
 
 class Percentage
 {
-    public function __construct()
-    {
-        // constructor body
-    }
-
     /*
         What is the percentage increase or decrease
         from $a to $b ?
     */
     public static function changeBetween($a, $b)
     {
-        return ($b - $a) / $a * 100;
+        return floatval(($b - $a) / $a * 100);
+    }
+
+    /*
+        What is the absolute percentage increase or decrease
+        from $a to $b ?
+    */
+    public static function absoluteChangeBetween($a, $b)
+    {
+        return floatval(abs(static::changeBetween($a, $b)));
     }
 
     /*
@@ -23,7 +27,7 @@ class Percentage
     */
     public static function percentageOf($a, $b)
     {
-        return $a * 100 / $b;
+        return floatval($a * 100 / $b);
     }
 
     /*
@@ -31,6 +35,22 @@ class Percentage
     */
     public static function fromNumber($percentage, $number)
     {
-        return $number * ($percentage / 100);
+        return floatval($number * ($percentage / 100));
+    }
+
+    /*
+        Get the absolute value if you extend range $a to $b with $percentage
+    */
+    public static function extension($percentage, $a, $b): float
+    {
+        if ($a > $b) {
+            $movement = $a - $b;
+
+            return floatval($a - ($movement * $percentage / 100));
+        } else {
+            $movement = $b - $a;
+
+            return floatval($a + ($movement * $percentage / 100));
+        }
     }
 }

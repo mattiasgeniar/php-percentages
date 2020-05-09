@@ -17,16 +17,26 @@ composer require mattiasgeniar/php-percentages
 ```php
 use Mattiasgeniar\Percentage\Percentage;
 
-// Percentage increase/decrease from $a to $b
-Percentage::changeBetween(100, 120);    // 20%
+// Percentage increase 100 to 120?
+Percentage::changeBetween(100, 120);            // 20%
 
-// How much is $a in relation to $b?
-Percentage::percentageOf(120, 100);     // 120%
-Percentage::percentageOf(50, 100);      // 50%
+// What's the absolute change from 100 to 80?
+Percentage::absoluteChangeBetween(100, 80);     // 20%, not -20%
 
-// What is $a percentage of $b?
-Percentage::fromNumber(20, 200);        // 40
-Percentage::fromNumber(50, 200);        // 100
+// How much is 120 to 100?
+Percentage::percentageOf(120, 100);             // 120%
+
+// How much is 50 to 100?
+Percentage::percentageOf(50, 100);              // 50%
+
+// What is 20% of 200?
+Percentage::fromNumber(20, 200);                // 40
+
+// What is the 140% extension from 3 to 2?
+Percentage::extension(140, 3, 2);               // 1.6
+
+// What is the 140% extension from 1 to 2?
+Percentage::extension(140, 1, 2);               // 2.4
 ```
 
 ## Testing

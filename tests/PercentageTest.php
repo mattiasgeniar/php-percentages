@@ -19,6 +19,8 @@ class ExampleTest extends TestCase
         $this->assertEquals(20, Percentage::changeBetween(100, 120));
 
         $this->assertEquals(-20, Percentage::changeBetween(100, 80));
+
+        $this->assertEquals(20, Percentage::absoluteChangeBetween(100, 80));
     }
 
     /** @test */
@@ -37,5 +39,13 @@ class ExampleTest extends TestCase
         $this->assertEquals(100, Percentage::fromNumber(50, 200));
 
         $this->assertEquals(-40, Percentage::fromNumber(-20, 200));
+    }
+
+    /** @test */
+    public function it_can_get_the_percentage_extension_value()
+    {
+        $this->assertEquals(1.6, Percentage::extension(140, 3, 2));
+
+        $this->assertEquals(2.4, Percentage::extension(140, 1, 2));
     }
 }
