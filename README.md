@@ -24,19 +24,19 @@ Percentage::differenceBetween(100, 120);            // 20%
 Percentage::absoluteDifferenceBetween(100, 80);     // 20%, not -20%
 
 // How much is 120 compared to 100?
-Percentage::calculate(120, 100);             // 120%
+Percentage::calculate(120, 100);                    // 120%
 
 // How much is 50 compared to 100?
-Percentage::calculate(50, 100);              // 50%
+Percentage::calculate(50, 100);                     // 50%
 
 // What is 20% of 200?
-Percentage::of(20, 200);                // 40
+Percentage::of(20, 200);                            // 40
 
 // What is the 140% extension from 3 to 2?
-Percentage::extension(140, 3, 2);               // 1.6
+Percentage::extension(140, 3, 2);                   // 1.6
 
 // What is the 140% extension from 1 to 2?
-Percentage::extension(140, 1, 2);               // 2.4
+Percentage::extension(140, 1, 2);                   // 2.4
 ```
 
 ## Testing
