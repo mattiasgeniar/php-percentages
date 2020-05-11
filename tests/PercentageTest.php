@@ -15,6 +15,8 @@ class PercentageTest extends TestCase
         $this->assertEquals(-20, Percentage::differenceBetween(100, 80));
 
         $this->assertEquals(20, Percentage::absoluteDifferenceBetween(100, 80));
+
+        $this->assertEquals(-48, round(Percentage::differenceBetween(862, 447), 0));
     }
 
     /** @test */
