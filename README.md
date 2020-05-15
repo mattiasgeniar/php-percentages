@@ -22,6 +22,7 @@ use Mattiasgeniar\Percentage\Percentage;
 Percentage::differenceBetween(100, 120);            // 20%
 
 // What's the absolute percentage change from 100 to 80?
+// (uses the abs() function)
 Percentage::absoluteDifferenceBetween(100, 80);     // 20%, not -20%
 
 // How much is 120 compared to 100?
