@@ -15,6 +15,7 @@ composer require mattiasgeniar/php-percentages
 ## Usage
 
 ```php
+<?php
 use Mattiasgeniar\Percentage\Percentage;
 
 // What's the percentage increase from 100 to 120?
