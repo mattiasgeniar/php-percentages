@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Mattiasgeniar\Percentage\Tests;
 
 use Mattiasgeniar\Percentage\Percentage;
