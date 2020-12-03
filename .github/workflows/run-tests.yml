@@ -9,7 +9,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest, windows-latest]
-        php: [7.4, 7.3, 7.2]
+        php: [7.4, 7.3, 7.2, 8.0]
         dependency-version: [prefer-lowest, prefer-stable]
         include:
           - testbench: 5.*
@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Cache dependencies
         uses: actions/cache@v1
@@ -27,7 +27,7 @@ jobs:
           key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v1
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
@@ -35,8 +35,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require "phpunit/phpunit" --no-interaction --no-update
-          composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
+          composer require "phpunit/phpunit" --no-interaction --no-update --ignore-platform-req=php
+          composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --ignore-platform-req=php
 
       - name: Execute tests
         run: vendor/bin/phpunit
