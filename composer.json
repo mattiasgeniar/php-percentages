@@ -25,7 +25,10 @@
     "autoload": {
         "psr-4": {
             "Mattiasgeniar\\Percentage\\": "src"
-        }
+        },
+        "files": [
+            "src/Helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
