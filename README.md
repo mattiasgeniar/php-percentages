@@ -41,6 +41,16 @@ Percentage::extension(140, 3, 2);                   // 1.6
 Percentage::extension(140, 1, 2);                   // 2.4
 ```
 
+## Helper functions
+
+The above expressions can also be used through a variety of helper functions:
+
+- `percentage()`
+- `percentage_between()`
+- `percentage_abs_between()`
+- `percentage_of()`
+- `percentage_extension()`
+
 ## Testing
 
 ``` bash
