@@ -2,8 +2,7 @@
 
 use Mattiasgeniar\Percentage\Percentage;
 
-if (!function_exists("percentage_between"))
-{
+if (! function_exists("percentage_between")) {
     /**
      * @param float $a
      * @param float $b
@@ -15,8 +14,7 @@ if (!function_exists("percentage_between"))
     }
 }
 
-if (!function_exists("percentage_abs_between"))
-{
+if (! function_exists("percentage_abs_between")) {
     /**
      * @param float $a
      * @param float $b
@@ -28,8 +26,7 @@ if (!function_exists("percentage_abs_between"))
     }
 }
 
-if (!function_exists("percentage"))
-{
+if (! function_exists("percentage")) {
     /**
      * @param float $a
      * @param float $b
@@ -41,8 +38,7 @@ if (!function_exists("percentage"))
     }
 }
 
-if (!function_exists("percentage_of"))
-{
+if (! function_exists("percentage_of")) {
     /**
      * @param float $percentage
      * @param float $number
@@ -54,8 +50,7 @@ if (!function_exists("percentage_of"))
     }
 }
 
-if (!function_exists("percentage_extension"))
-{
+if (! function_exists("percentage_extension")) {
     /**
      * @param float $percentage
      * @param float $a

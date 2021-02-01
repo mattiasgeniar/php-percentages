@@ -52,5 +52,4 @@ final class HelpersTest extends TestCase
         $result = percentage_extension(1, 1, 1);
         self::assertNotNull($result);
     }
-
 }
